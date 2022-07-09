@@ -1,0 +1,37 @@
+.header-one {
+    height: 80px;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 $padding-x;
+    overflow-y: hidden;
+    border-bottom: 1px solid $grey;
+}
+
+.ham-menu {
+    // position: absolute;
+    // right: 0;
+    // top: 0;
+    // transform: translate(-16px, 20px);
+}
+
+nav {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    padding: $sp-four $padding-x;
+    background-color: #fff;
+    width: 100vw;
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: $sp-three;
+        margin-bottom: $sp-three;
+
+        a {
+            color: $text-color;
+        }
+    }
+}

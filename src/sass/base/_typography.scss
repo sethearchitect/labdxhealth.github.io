@@ -1,3 +1,14 @@
 p {
     font-family: $body-txt;
 }
+
+a {
+    font-family: $body-txt;
+}
+
+h1,
+h2,
+h3 {
+    color: $black;
+    font-family: $heading-txt;
+}
