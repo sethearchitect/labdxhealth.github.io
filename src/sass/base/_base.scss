@@ -27,3 +27,39 @@ img {
     height: 100%;
     object-fit: cover;
 }
+
+#hero-section {
+    padding: $sp-five $padding-x;
+    text-align: center;
+    height: auto;
+
+    .hero-heading {
+        margin-bottom: $sp-three;
+    }
+
+    button {
+        margin: $sp-four 0;
+    }
+}
+
+.hero-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    height: calc(max(45%, 285px));
+}
+
+.h-image {
+    width: 100%;
+    overflow: hidden;
+}
+
+.h-one,
+.h-four {
+    border-radius: 0 40px 0 40px;
+}
+
+.h-two,
+.h-three {
+    border-radius: 40px 0 40px 0;
+}
