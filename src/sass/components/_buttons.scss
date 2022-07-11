@@ -1,0 +1,13 @@
+.cta-btn {
+    padding: $sp-one 46px;
+    background-color: $main-color;
+    border: none;
+    border-radius: 4px;
+    transition: 200ms ease-out;
+    font-family: $body-txt;
+    color: #fff;
+}
+
+.cta-btn:hover {
+    background-color: $hover-color;
+}

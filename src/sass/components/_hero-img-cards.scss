@@ -1,7 +1,17 @@
 .h-image {
-    height: 150.5px;
-    width: 160.7px;
+    width: 100%;
+    // height: calc(100% - 40px);
     overflow: hidden;
     // display: grid;
     // place-items: center;
+}
+
+.h-one,
+.h-four {
+    border-radius: 0 40px 0 40px;
+}
+
+.h-two,
+.h-three {
+    border-radius: 40px 0 40px 0;
 }

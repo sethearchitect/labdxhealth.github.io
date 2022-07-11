@@ -12,3 +12,8 @@ h3 {
     color: $black;
     font-family: $heading-txt;
 }
+
+h1.hero-heading {
+    font-size: calc(clamp(1.5em, 1.0em + 2vw, 2.75em));
+    font-weight: 600;
+}
