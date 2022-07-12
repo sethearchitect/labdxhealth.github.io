@@ -116,9 +116,15 @@ section#feature-points {
     }
 }
 
+.dropdown-tab {
+    border-bottom: 1px solid $grey;
+    position: relative;
+    overflow-y: hidden;
+}
+
 section#solutions {
     text-align: left;
-    background-image: linear-gradient(to bottom, #fff, $dx-grey);
+    background-image: linear-gradient(to bottom, #fff, rgba(250, 250, 250, .4));
 
     h2 {
         margin-bottom: $sp-three;
@@ -131,11 +137,12 @@ section#solutions {
             margin: $sp-three 0;
         }
 
-        ul li {
-            border-bottom: 1px solid $grey;
-            position: relative;
-            overflow-y: hidden;
+        ul {
+            display: grid;
+            row-gap: $sp-base;
+        }
 
+        ul li {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -162,7 +169,7 @@ section#solutions {
             width: calc(min(31ch, 90%));
         }
 
-        li div.panel-drop-content {
+        div.panel-drop-content {
             position: absolute;
             left: 0;
             top: 0;
@@ -180,5 +187,70 @@ section#solutions {
 
     img.pack-pick {
         height: auto;
+    }
+}
+
+
+section#faqs {
+
+    text-align: left;
+
+    div.illustration-cont {
+        height: 230px;
+        margin: $sp-three 0;
+    }
+
+    ul {
+        display: grid;
+        row-gap: $sp-two;
+    }
+
+    ul li.question {
+        border-bottom: 1px solid $grey;
+
+    }
+
+    li.question::before {
+        content: 'Q.';
+        font-family: $heading-txt;
+        font-weight: 700;
+        width: auto;
+        margin-bottom: $sp-two;
+    }
+
+    .answer {
+        position: absolute;
+        left: 0;
+        transform: translateY($sp-three);
+    }
+
+}
+
+section#anecdote {
+    text-align: left;
+    background-image: linear-gradient(45deg, #fff, $dx-grey);
+
+    img {
+        height: 300px;
+        object-fit: cover;
+        border-radius: 4px;
+        margin: $sp-three 0;
+    }
+
+    p {
+        margin: $sp-three 0 $sp-four;
+    }
+}
+
+section#banner-cta {
+    background-image: linear-gradient(35deg, $main-color, $hover-color);
+    color: #fff;
+
+    h3 {
+        color: #fff;
+    }
+
+    p {
+        margin: $sp-three 0 $sp-four;
     }
 }

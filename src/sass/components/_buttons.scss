@@ -12,11 +12,26 @@
     background-color: $hover-color;
 }
 
+.alt-btn {
+    padding: $sp-one 46px;
+    background-color: #fff;
+    border: 1px solid $main-color;
+    border-radius: 4px;
+    transition: 200ms ease-out;
+    font-family: $body-txt;
+    color: $main-color;
+}
+
+.alt-btn:hover {
+    background-color: $hover-color;
+}
+
 .txt-btn {
     display: flex;
     gap: $sp-one;
     color: $hover-color;
     font-weight: bold;
+    font-size: 14px;
     margin-top: $sp-three;
 
     a {
