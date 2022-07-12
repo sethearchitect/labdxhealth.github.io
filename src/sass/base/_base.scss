@@ -64,6 +64,16 @@ img {
     border-radius: 40px 0 40px 0;
 }
 
+.emph-highlight {
+    text-decoration: underline;
+    text-decoration-color: $main-color;
+    text-decoration-thickness: 2px;
+}
+
+.dx-emphasis {
+    color: $main-color;
+}
+
 section {
     text-align: center;
     padding: $sp-four $padding-x;
@@ -94,6 +104,7 @@ section#feature-points {
         border-radius: 4px;
     }
 
+
     div img {
         width: 108px;
         height: 108px;
@@ -107,12 +118,13 @@ section#feature-points {
 
 section#solutions {
     text-align: left;
+    background-image: linear-gradient(to bottom, #fff, $dx-grey);
 
     h2 {
         margin-bottom: $sp-three;
     }
 
-    .gwp {
+    .dx-package {
         margin-top: $sp-four;
 
         p.pack-bio {
@@ -121,7 +133,6 @@ section#solutions {
 
         ul li {
             border-bottom: 1px solid $grey;
-            color: rgba(126, 131, 137, 1);
             position: relative;
             overflow-y: hidden;
 
@@ -130,15 +141,44 @@ section#solutions {
             align-items: center;
         }
 
+        h4 {
+            position: relative;
+        }
+
+        h4::before {
+            content: '';
+            position: absolute;
+            width: 22px;
+            height: 3px;
+            border-radius: 3px;
+            background-color: $main-color;
+
+            left: 0;
+            top: 0;
+            transform: translateY(-8px);
+        }
+
         p.panel-name {
-            width: calc(min(20ch, 100%));
+            width: calc(min(31ch, 90%));
         }
 
         li div.panel-drop-content {
             position: absolute;
             left: 0;
             top: 0;
-            transform: translateY(calc(100% + 1em));
+            transform: translateY(calc(100% + 1.5em));
         }
+    }
+
+    .package-img {
+        max-width: 100%;
+        height: 268px;
+        border-radius: 4px;
+        margin-top: $sp-three;
+        overflow: hidden;
+    }
+
+    img.pack-pick {
+        height: auto;
     }
 }
