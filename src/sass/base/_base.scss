@@ -63,3 +63,82 @@ img {
 .h-three {
     border-radius: 40px 0 40px 0;
 }
+
+section {
+    text-align: center;
+    padding: $sp-four $padding-x;
+}
+
+section#feature-points {
+
+    background-color: $dx-grey;
+
+    h2 {
+
+        margin-bottom: $sp-three;
+    }
+
+    p.f-subheading {
+        letter-spacing: -0.7px;
+        margin-bottom: $sp-four;
+    }
+
+    .f-container {
+        display: grid;
+        gap: 24px;
+    }
+
+    .f-points {
+        background-color: #fff;
+        padding: 1.5em 8px;
+        border-radius: 4px;
+    }
+
+    div img {
+        width: 108px;
+        height: 108px;
+        margin-bottom: 40px;
+    }
+
+    h5 {
+        margin-bottom: 24px;
+    }
+}
+
+section#solutions {
+    text-align: left;
+
+    h2 {
+        margin-bottom: $sp-three;
+    }
+
+    .gwp {
+        margin-top: $sp-four;
+
+        p.pack-bio {
+            margin: $sp-three 0;
+        }
+
+        ul li {
+            border-bottom: 1px solid $grey;
+            color: rgba(126, 131, 137, 1);
+            position: relative;
+            overflow-y: hidden;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        p.panel-name {
+            width: calc(min(20ch, 100%));
+        }
+
+        li div.panel-drop-content {
+            position: absolute;
+            left: 0;
+            top: 0;
+            transform: translateY(calc(100% + 1em));
+        }
+    }
+}
