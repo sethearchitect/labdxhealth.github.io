@@ -47,6 +47,8 @@ img {
     grid-template-columns: 1fr 1fr;
     gap: 8px;
     height: calc(max(45%, 285px));
+    max-width: 480px;
+    margin: 0 auto;
 }
 
 .h-image {
@@ -88,14 +90,21 @@ section#feature-points {
         margin-bottom: $sp-three;
     }
 
+    p.f-subheading,
+    .f-container {
+        margin: 0 auto;
+    }
+
     p.f-subheading {
         letter-spacing: -0.7px;
         margin-bottom: $sp-four;
+        max-width: 640px;
     }
 
     .f-container {
         display: grid;
         gap: 24px;
+        max-width: 800px;
     }
 
     .f-points {
@@ -252,6 +261,9 @@ section#banner-cta {
 }
 
 section#footer {
+    background: $dx-grey;
+    // border-bottom: 1px solid $text-color;
+
     h6 {
         font-size: 18px;
         font-family: $heading-txt;
@@ -273,10 +285,10 @@ section#footer {
     }
 
     div.tel-no::before {
-        content: url('images/bi_telephone.svg');
+        content: url(images/bi_telephone.svg);
         display: inline-block;
-        height: 16px;
-        width: 16px;
+        height: 32px;
+        width: 32px;
     }
 
     .tel-no div {
