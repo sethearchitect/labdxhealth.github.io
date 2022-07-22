@@ -66,6 +66,10 @@ img {
     border-radius: 40px 0 40px 0;
 }
 
+.flipped-img {
+    transform: rotateY(180deg);
+}
+
 .emph-highlight {
     text-decoration: underline;
     text-decoration-color: $main-color;
@@ -207,6 +211,7 @@ section#faqs {
 
     div.illustration-cont {
         align-self: center;
+        transform: translateY(50px);
         height: 230px;
         display: none;
         order: 2;
@@ -246,10 +251,9 @@ section#faqs {
 section#anecdote {
     background-image: linear-gradient(45deg, #fff, $dx-grey);
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(265px, 1fr));
     align-items: center;
     gap: $sp-three;
-
 
     img {
         height: 365px;
@@ -266,7 +270,15 @@ section#anecdote {
 
 section#banner-cta {
     background-image: linear-gradient(-35deg, $hover-color, $main-color);
+    margin: $sp-four $padding-x;
+    border-radius: 6px;
     color: #fff;
+    text-align: center;
+
+    div.banner-cta {
+        max-width: 720px;
+        margin: auto;
+    }
 
     h3 {
         color: #fff;
@@ -279,11 +291,20 @@ section#banner-cta {
 
 section#footer {
     background: $dx-grey;
-    // border-bottom: 1px solid $text-color;
 
     h6 {
         font-size: 18px;
         font-family: $heading-txt;
+        margin-bottom: $sp-three;
+    }
+
+    div.footer-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    div.footer-grid>div {
+        max-width: 275px;
     }
 
     div.contact-dets,
@@ -292,7 +313,7 @@ section#footer {
     }
 
     p.address {
-        margin: $sp-three 0;
+        margin-bottom: $sp-three;
     }
 
     div.tel-no {

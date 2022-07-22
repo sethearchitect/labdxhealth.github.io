@@ -13,17 +13,20 @@
 }
 
 .alt-btn {
-    padding: $sp-one 46px;
+    font-family: $body-txt;
+    font-weight: bold;
+    color: $main-color;
     background-color: #fff;
+    padding: $sp-one 46px;
     border: 1px solid $main-color;
     border-radius: 4px;
     transition: 200ms ease-out;
-    font-family: $body-txt;
-    color: $main-color;
+    white-space: nowrap;
 }
 
 .alt-btn:hover {
     background-color: $hover-color;
+    color: #fff;
 }
 
 .txt-btn {

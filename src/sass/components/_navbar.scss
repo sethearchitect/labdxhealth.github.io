@@ -6,7 +6,7 @@
     align-items: center;
     padding: 0 $padding-x;
     overflow-y: hidden;
-    border-bottom: 1px solid $grey;
+    box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
 }
 
 .ham-menu {
@@ -25,6 +25,14 @@ nav {
 
         a {
             color: $text-color;
+        }
+    }
+
+    a.contact-btn {
+        font-weight: bold;
+
+        &:hover {
+            color: $hover-color;
         }
     }
 }
