@@ -148,6 +148,7 @@ section#solutions {
 
     .dx-package {
         margin-top: $sp-four;
+        display: grid;
 
         p.pack-bio {
             margin: $sp-three 0;
@@ -182,7 +183,7 @@ section#solutions {
         }
 
         p.panel-name {
-            width: calc(min(31ch, 90%));
+            width: calc(min(32ch, 90%));
         }
 
         div.panel-drop-content {
@@ -193,6 +194,28 @@ section#solutions {
         }
     }
 
+    div.img-cont {
+        position: relative;
+        display: grid;
+        max-width: 402px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 88%;
+            height: 122%;
+            background-color: $dx-grey;
+            display: none;
+            z-index: -99;
+            place-self: center;
+        }
+
+    }
+
+    div.awp .img-cont .pack-pic {
+        height: auto;
+    }
+
     .package-img {
         max-width: 100%;
         height: 268px;
@@ -201,8 +224,9 @@ section#solutions {
         overflow: hidden;
     }
 
-    img.pack-pick {
-        height: auto;
+    p.price-tag {
+        font-size: small;
+        margin-top: $sp-two;
     }
 }
 
