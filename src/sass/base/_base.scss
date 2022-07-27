@@ -161,8 +161,8 @@ section#solutions {
 
         ul li {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            flex-direction: column;
+            // height: 32px;
         }
 
         h4 {
@@ -182,15 +182,19 @@ section#solutions {
             transform: translateY(-8px);
         }
 
+        .tab-title {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+
         p.panel-name {
             width: calc(min(32ch, 90%));
         }
 
         div.panel-drop-content {
-            position: absolute;
-            left: 0;
-            top: 0;
-            transform: translateY(calc(100% + 1.5em));
+            display: none;
+            margin-top: $sp-two;
         }
     }
 

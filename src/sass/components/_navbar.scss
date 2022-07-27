@@ -30,9 +30,29 @@ nav {
 
     a.contact-btn {
         font-weight: bold;
+    }
 
-        &:hover {
-            color: $hover-color;
+    ul li,
+    a.contact-btn {
+        position: relative;
+        overflow: hidden;
+
+        &::before {
+            content: '';
+            position: absolute;
+            height: 2px;
+            width: 100%;
+            background-color: $main-color;
+            border-radius: 50%;
+            bottom: 0;
+            transform: translate(-100%);
+            transition: 300ms ease-in;
+
+
+        }
+
+        &:hover::before {
+            transform: translate(0);
         }
     }
 }
