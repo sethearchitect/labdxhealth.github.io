@@ -134,7 +134,7 @@ section#feature-points {
     position: relative;
     overflow-y: hidden;
     height: 24px;
-    transition: 100ms ease-out;
+    transition: 250ms ease-out;
 }
 
 section#solutions {
@@ -149,11 +149,11 @@ section#solutions {
     }
 
     .dx-package {
-        margin-top: $sp-four;
+        margin-top: $sp-five;
         display: grid;
 
         p.pack-bio {
-            margin: $sp-three 0;
+            margin: 17px 0;
         }
 
         ul {
@@ -191,26 +191,28 @@ section#solutions {
             cursor: pointer;
         }
 
+        #dropdown-btn {
+            transition: 250ms ease-in;
+        }
+
         p.panel-name {
             width: calc(min(32ch, 90%));
 
         }
 
         .panel-drop-content {
-            // display: none;
-
             margin-top: $sp-two;
             font-family: $body-txt;
             font-size: 14px;
-            // position: absolute;
-            // left: 0;
-            // top: 100%;
-
-            // transform: translateY(calc(100% + $sp-two));
         }
 
         .show {
             height: 100%;
+        }
+
+        .rotate {
+            transform: rotate(180deg);
+            transform-origin: center;
         }
     }
 
@@ -218,6 +220,7 @@ section#solutions {
         position: relative;
         display: grid;
         max-width: 402px;
+        transition: 250ms ease-out;
 
         &::before {
             content: '';
@@ -269,15 +272,19 @@ section#faqs {
 
     ul li.question {
         border-bottom: 1px solid $grey;
+        position: relative;
 
     }
 
-    li.question::before {
-        content: 'Q.';
+    li .q-title p:nth-child(1) {
         font-family: $heading-txt;
         font-weight: 700;
         width: auto;
-        margin-bottom: $sp-two;
+        margin-right: $sp-two;
+    }
+
+    .q-title p {
+        display: inline-block;
     }
 
     .answer {

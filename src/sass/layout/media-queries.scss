@@ -17,6 +17,10 @@
 }
 
 @media screen and (min-width: 980px) {
+    section {
+        padding: 60px calc(min(12vw, 200px));
+    }
+
     section#hero-section {
         display: grid;
         grid-template-columns: repeat(2, minmax(380px, 1fr));
@@ -61,15 +65,16 @@
             grid-template-areas:
                 'img title'
                 'img contenty';
-            gap: 4%;
         }
 
         div.dx-package h4 {
             grid-area: title;
+            // max-width: 450px;
         }
 
         div.package-content {
             grid-area: contenty;
+            // max-width: 450px;
         }
 
         div.img-cont {
@@ -92,10 +97,7 @@
                 'contenty img';
         }
 
-        div.awp .img-cont {
-            justify-self: end;
-        }
-
+        div.awp .img-cont,
         div.awp .package-img {
             justify-self: end;
         }

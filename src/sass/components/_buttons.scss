@@ -22,29 +22,30 @@
     border-radius: 4px;
     transition: 200ms ease-out;
     white-space: nowrap;
+
+    &:hover {
+        background-color: $hover-color;
+        color: #fff;
+    }
 }
 
-.alt-btn:hover {
-    background-color: $hover-color;
-    color: #fff;
-}
 
 .txt-btn {
     display: flex;
     gap: $sp-one;
-    color: $hover-color;
+    color: $main-color;
     font-weight: bold;
     font-size: 14px;
     margin-top: $sp-three;
 
     a {
         &:hover {
-            color: $main-color;
+            color: $hover-color;
             cursor: pointer;
         }
 
         &:visited {
-            color: $hover-color;
+            color: $main-color;
         }
     }
 
