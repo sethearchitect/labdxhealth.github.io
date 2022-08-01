@@ -132,9 +132,7 @@ section#feature-points {
 .dropdown-tab {
     border-bottom: 1px solid $grey;
     position: relative;
-    overflow-y: hidden;
-    height: 24px;
-    transition: 250ms ease-out;
+    display: grid;
 }
 
 section#solutions {
@@ -164,7 +162,6 @@ section#solutions {
         ul li {
             display: flex;
             flex-direction: column;
-            // height: 32px;
         }
 
         h4 {
@@ -185,7 +182,7 @@ section#solutions {
         }
 
         .tab-title {
-            width: 100%;
+            width: auto;
             display: flex;
             justify-content: space-between;
             cursor: pointer;
@@ -201,9 +198,11 @@ section#solutions {
         }
 
         .panel-drop-content {
-            margin-top: $sp-two;
             font-family: $body-txt;
             font-size: 14px;
+            max-height: 0;
+            transition: max-height 250ms ease-out;
+            overflow: hidden;
         }
 
         .show {
@@ -211,7 +210,7 @@ section#solutions {
         }
 
         .rotate {
-            transform: rotate(180deg);
+            transform: rotate(-180deg);
             transform-origin: center;
         }
     }
@@ -276,6 +275,10 @@ section#faqs {
 
     }
 
+    .q-title {
+        cursor: pointer;
+    }
+
     li .q-title p:nth-child(1) {
         font-family: $heading-txt;
         font-weight: 700;
@@ -288,9 +291,7 @@ section#faqs {
     }
 
     .answer {
-        position: absolute;
-        left: 0;
-        transform: translateY($sp-three);
+        font-family: $body-txt;
     }
 
 }
@@ -370,7 +371,7 @@ section#footer {
     }
 
     div.tel-no::before {
-        content: url(images/bi_telephone.svg);
+        content: url('images/bi-telephone.svg');
         display: inline-block;
         height: 32px;
         width: 32px;
