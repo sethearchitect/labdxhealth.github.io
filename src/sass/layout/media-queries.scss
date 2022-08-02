@@ -115,6 +115,11 @@
         div.illustration-cont {
             display: block;
         }
+
+        .answer {
+            max-width: 62ch;
+            padding-left: 40px;
+        }
     }
 
     section#footer {
@@ -128,5 +133,3 @@
 div.copyright-txt {
     text-align: center;
 }
-
-@media screen and (min-width: 1024px) {}

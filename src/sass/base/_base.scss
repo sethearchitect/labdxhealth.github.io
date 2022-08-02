@@ -100,7 +100,6 @@ section#feature-points {
     }
 
     p.f-subheading {
-        letter-spacing: -0.7px;
         margin-bottom: $sp-four;
         max-width: 640px;
     }
@@ -132,7 +131,39 @@ section#feature-points {
 .dropdown-tab {
     border-bottom: 1px solid $grey;
     position: relative;
-    display: grid;
+}
+
+.panel-drop-content {
+    max-height: 0;
+    transition: max-height 0.5s ease;
+    overflow: hidden;
+}
+
+.panel-drop-content p {
+    font-family: $body-txt;
+    font-size: 14px;
+    padding-top: $sp-one;
+}
+
+.tab-title.active svg#dropdown-btn {
+    transform: rotate(180deg);
+}
+
+.show {
+    animation: fade 0.5s ease-in-out;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
 }
 
 section#solutions {
@@ -185,6 +216,7 @@ section#solutions {
             width: auto;
             display: flex;
             justify-content: space-between;
+            align-items: center;
             cursor: pointer;
         }
 
@@ -195,23 +227,6 @@ section#solutions {
         p.panel-name {
             width: calc(min(32ch, 90%));
 
-        }
-
-        .panel-drop-content {
-            font-family: $body-txt;
-            font-size: 14px;
-            max-height: 0;
-            transition: max-height 250ms ease-out;
-            overflow: hidden;
-        }
-
-        .show {
-            height: 100%;
-        }
-
-        .rotate {
-            transform: rotate(-180deg);
-            transform-origin: center;
         }
     }
 
@@ -277,6 +292,8 @@ section#faqs {
 
     .q-title {
         cursor: pointer;
+        display: flex;
+        align-items: center;
     }
 
     li .q-title p:nth-child(1) {
@@ -291,7 +308,10 @@ section#faqs {
     }
 
     .answer {
-        font-family: $body-txt;
+        display: grid;
+        row-gap: $sp-one;
+        padding-top: $sp-one;
+
     }
 
 }
@@ -371,7 +391,8 @@ section#footer {
     }
 
     div.tel-no::before {
-        content: url('images/bi-telephone.svg');
+        content: url(images/sure.svg);
+        background-color: $main-color;
         display: inline-block;
         height: 32px;
         width: 32px;
@@ -384,8 +405,8 @@ section#footer {
     }
 
     a img.sm-icon {
-        width: 50px;
-        height: 50px;
+        width: 32px;
+        height: 32px;
     }
 }
 
