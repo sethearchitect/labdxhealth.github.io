@@ -28,4 +28,5 @@ h2 {
 
 h3 {
     line-height: 1.75;
+    font-size: calc(clamp(1.25em, 1.0em + .5vw, 1.75em));
 }

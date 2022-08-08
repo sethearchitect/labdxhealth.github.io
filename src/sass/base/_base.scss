@@ -281,20 +281,10 @@ section#solutions {
 
     div.img-cont {
         position: relative;
+
         display: grid;
         max-width: 402px;
         transition: 250ms ease-out;
-
-        &::before {
-            content: '';
-            position: absolute;
-            width: 88%;
-            height: 122%;
-            background-color: $dx-grey;
-            display: none;
-            z-index: -99;
-            place-self: center;
-        }
 
     }
 
@@ -308,6 +298,20 @@ section#solutions {
         border-radius: 4px;
         margin-top: $sp-three;
         overflow: hidden;
+
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 80%;
+            height: 100%;
+            background-color: $dx-grey;
+            transform: rotate(15deg);
+            transform-origin: center;
+            display: none;
+            z-index: -99;
+            justify-self: center;
+        }
     }
 
     p.price-tag {
@@ -368,7 +372,7 @@ section#faqs {
 section#anecdote {
     background-image: linear-gradient(45deg, #fff, $dx-grey);
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(265px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(265px, 450px));
     align-items: center;
     gap: $sp-three;
 
@@ -377,7 +381,6 @@ section#anecdote {
         max-width: 300px;
         object-fit: cover;
         border-radius: 4px;
-        // margin: 0 0 $sp-three;
     }
 
     p {

@@ -81,15 +81,15 @@
         div.img-cont {
             grid-area: img;
             align-self: start;
-
-            &::before {
-                display: block;
-            }
         }
 
         div.package-img {
             width: min(100%, 304px);
             margin: 0;
+
+            &::before {
+                display: block;
+            }
         }
 
         div.awp {
@@ -120,6 +120,12 @@
         .answer {
             max-width: 62ch;
             padding-left: 40px;
+        }
+    }
+
+    section#anecdote {
+        img {
+            justify-self: center;
         }
     }
 
