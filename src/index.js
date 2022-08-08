@@ -65,3 +65,65 @@ dropDownFunc(panelNames);
 dropDownFunc(qNames);
 
 
+//Hero section scroll animation
+
+const heroDivs = document.querySelectorAll('.slide');
+
+// const hdOptions = {
+//     threshold: 1
+// }
+
+// const hdObserver = new IntersectionObserver(function (entries, hdObserver) {
+//     entries.forEach(entry => {
+//         if (!entry.isIntersecting) {
+//             return;
+//         } else {
+//             entry.target.classList.add('focused');
+//             hdObserver.unobserve(entry.target);
+//         }
+//     })
+// }, hdOptions)
+
+//create intersection observer instance for feature points
+
+const fPoints = document.querySelectorAll('.f-points');
+
+const featureOptions = {
+    threshold: 0,
+    rootMargin: '-100px 0px 0px 0px'
+};
+
+const featureObserver = new IntersectionObserver(function (entries, featureObserver) {
+    entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+            return;
+        } else {
+            entry.target.classList.add('focused');
+            featureObserver.unobserve(entry.target);
+            console.log(entry.target);
+        }
+    })
+}, featureOptions);
+
+fPoints.forEach(fPoint => {
+    featureObserver.observe(fPoint);
+})
+
+heroDivs.forEach(heroDiv => {
+    featureObserver.observe(heroDiv);
+})
+
+
+
+/*const observer = new IntersectionObserver(function (entries, observer) {
+
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            console.log(entry.target);
+        }
+    })
+}, options);
+
+sections.forEach(section => {
+    observer.observe(section);
+})*/

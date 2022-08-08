@@ -61,7 +61,8 @@
 
         div.dx-package {
             position: relative;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(2, 400px);
+            justify-content: space-between;
             grid-template-areas:
                 'img title'
                 'img contenty';
@@ -106,7 +107,7 @@
     section#faqs {
         display: flex;
         justify-content: space-between;
-        gap: 2%;
+        gap: 10%;
 
         div.faq-cont {
             flex-direction: row;

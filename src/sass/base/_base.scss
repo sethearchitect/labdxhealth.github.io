@@ -42,6 +42,16 @@ img {
     }
 }
 
+.hero-test {
+    opacity: 1;
+
+}
+
+.hero-copy {
+    transform: translateX(100px);
+    opacity: 0;
+}
+
 .hero-images {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -49,6 +59,8 @@ img {
     height: calc(max(45%, 285px));
     max-width: 480px;
     margin: 0 auto;
+    transform: translateX(-100px);
+    opacity: 0;
 }
 
 .h-image {
@@ -70,10 +82,22 @@ img {
     transform: rotateY(180deg);
 }
 
+.hero-copy,
+.hero-images {
+    transform: opacity 250ms ease, transform 1s ease;
+}
+
+.hero-copy.focused,
+.hero-images.focused {
+    transform: translateX(0);
+    opacity: 1;
+}
+
 .emph-highlight {
     text-decoration: underline;
     text-decoration-color: $main-color;
-    text-decoration-thickness: 2px;
+    text-decoration-thickness: 3.2px;
+
 }
 
 .dx-emphasis {
@@ -111,10 +135,34 @@ section#feature-points {
     }
 
     .f-points {
-
         padding: 1.5em 8px;
         border-radius: 4px;
     }
+
+    .f-points.f-left {
+        transform: translateX(-50px);
+    }
+
+    .f-points.f-right {
+        transform: translateX(50px);
+    }
+
+    .f-points.f-indent {
+        transform: translateY(50px);
+    }
+
+    .f-left,
+    .f-right,
+    .f-indent {
+        transition: transform 1s ease;
+    }
+
+    .f-left.focused,
+    .f-right.focused,
+    .f-indent.focused {
+        transform: translate(0);
+    }
+
 
 
     div img {
@@ -141,8 +189,9 @@ section#feature-points {
 
 .panel-drop-content p {
     font-family: $body-txt;
-    font-size: 14px;
+    font-size: 12px;
     padding-top: $sp-one;
+    color: $main-color;
 }
 
 .tab-title.active svg#dropdown-btn {
@@ -167,10 +216,10 @@ section#feature-points {
 }
 
 section#solutions {
-    background-image: linear-gradient(to bottom, #fff, rgba(250, 250, 250, .4));
+    // background-image: linear-gradient(to bottom, #fff, rgba(250, 250, 250, .4));
 
     h2 {
-        margin-bottom: $sp-three;
+        margin-bottom: $sp-two;
     }
 
     div.soln-header p {
