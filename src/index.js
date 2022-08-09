@@ -22,23 +22,34 @@ navToggle.addEventListener('click', () => {
     header.classList.toggle('nav-active');
 })
 
+//Navbar collapse on scroll when active
+
 let scrollState = 0;
+
 window.addEventListener('scroll', () => {
-    let yScroll = window.scrollY
-    if (scrollState == 0) {
 
-    }
+    if (!header.classList.contains('nav-active')) {
 
-    if (yScroll > scrollState) {
-        header.classList.remove('open');
-        header.classList.add('collapse');
     } else {
-        header.classList.remove('collapse');
-        header.classList.add('open');
-    }
+        let yScroll = window.scrollY
+        if (scrollState == 0) {
 
-    scrollState = yScroll;
+        }
+
+        if (yScroll > scrollState) {
+            header.classList.remove('open');
+            header.classList.add('collapse');
+        } else {
+            header.classList.remove('collapse');
+            header.classList.add('open');
+        }
+
+        scrollState = yScroll;
+
+    }
 })
+
+//Accordions
 
 function dropDownFunc(elements) {
     elements.forEach(element => {
@@ -65,26 +76,38 @@ dropDownFunc(panelNames);
 dropDownFunc(qNames);
 
 
-//Hero section scroll animation
+//Hero section scroll observer
 
 const heroDivs = document.querySelectorAll('.slide');
 
-// const hdOptions = {
-//     threshold: 1
-// }
+const herOptions = {
+    threshold: 0
+}
 
-// const hdObserver = new IntersectionObserver(function (entries, hdObserver) {
-//     entries.forEach(entry => {
-//         if (!entry.isIntersecting) {
-//             return;
-//         } else {
-//             entry.target.classList.add('focused');
-//             hdObserver.unobserve(entry.target);
-//         }
-//     })
-// }, hdOptions)
+const herObserver = new IntersectionObserver(function (entries, herObserver) {
+    entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+            return;
+        } else {
+            entry.target.classList.add('load');
+            herObserver.unobserve(entry.target);
+        }
+    })
+}, herOptions)
 
-//create intersection observer instance for feature points
+heroDivs.forEach(heroDiv => {
+    herObserver.observe(heroDiv);
+});
+
+//Other loose elements
+
+const looseElems = document.querySelectorAll('.opacity-fade');
+
+looseElems.forEach(looseElem => {
+    herObserver.observe(looseElem);
+})
+
+//Intersection observer for feature points
 
 const fPoints = document.querySelectorAll('.f-points');
 
@@ -100,7 +123,6 @@ const featureObserver = new IntersectionObserver(function (entries, featureObser
         } else {
             entry.target.classList.add('focused');
             featureObserver.unobserve(entry.target);
-            console.log(entry.target);
         }
     })
 }, featureOptions);
@@ -113,17 +135,10 @@ heroDivs.forEach(heroDiv => {
     featureObserver.observe(heroDiv);
 })
 
+const packSlideItems = document.querySelectorAll('.paslide');
 
+console.log(packSlideItems);
 
-/*const observer = new IntersectionObserver(function (entries, observer) {
-
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            console.log(entry.target);
-        }
-    })
-}, options);
-
-sections.forEach(section => {
-    observer.observe(section);
-})*/
+packSlideItems.forEach(packSlideItem => {
+    featureObserver.observe(packSlideItem);
+});
