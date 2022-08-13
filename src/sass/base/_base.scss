@@ -490,14 +490,6 @@ section#footer {
         position: relative;
     }
 
-    div.tel-no::before {
-        content: url(images/sure.svg);
-        background-color: $main-color;
-        display: inline-block;
-        height: 32px;
-        width: 32px;
-    }
-
     .tel-no div {
         display: flex;
         flex-direction: column;
