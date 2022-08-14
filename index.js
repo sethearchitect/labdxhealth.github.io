@@ -137,8 +137,6 @@ heroDivs.forEach(heroDiv => {
 
 const packSlideItems = document.querySelectorAll('.paslide');
 
-console.log(packSlideItems);
-
 packSlideItems.forEach(packSlideItem => {
     featureObserver.observe(packSlideItem);
 });

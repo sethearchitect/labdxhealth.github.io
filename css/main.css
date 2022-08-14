@@ -229,7 +229,7 @@ section#solutions .dx-package {
   max-width: 900px;
 }
 section#solutions .dx-package p.pack-bio {
-  margin: 17px 0;
+  margin: 22px 0;
 }
 section#solutions .dx-package ul {
   display: grid;
@@ -388,6 +388,9 @@ section#banner-cta h3 {
 section#banner-cta p {
   margin: 36px 0 60px;
 }
+section#banner-cta a.alt-btn {
+  font-size: 13px;
+}
 
 section#footer {
   background: rgb(250, 250, 250);
@@ -499,8 +502,6 @@ h5 {
 }
 .alt-btn:hover {
   background-color: rgb(18, 34, 67);
-}
-.alt-btn:hover a {
   color: #fff;
 }
 

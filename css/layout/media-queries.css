@@ -1,17 +1,104 @@
-/* Error: Undefined variable.
- *    ,
- * 10 |             top: $sp-two;
- *    |                  ^^^^^^^
- *    '
- *   src\sass\layout\media-queries.scss 10:18  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Undefined variable.\a    \2577 \a 10 \2502              top: $sp-two;\d\a    \2502                   ^^^^^^^\a    \2575 \a   src\\sass\\layout\\media-queries.scss 10:18  root stylesheet";
+@media screen and (min-width: 700px) {
+  section#feature-points .f-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  section#feature-points .f-indent {
+    position: relative;
+    top: 22px;
+  }
+  section#feature-points p.f-subheading {
+    letter-spacing: 0px;
+  }
+}
+@media screen and (min-width: 980px) {
+  section {
+    padding: 60px min(12vw, 200px);
+  }
+  section#hero-section {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(380px, 1fr));
+    gap: 5%;
+  }
+  .hero-heading {
+    margin-top: -0.2em;
+  }
+  .hero-copy {
+    text-align: left;
+  }
+  div.hero-images {
+    height: 315px;
+    max-width: 380px;
+    position: relative;
+    margin: 0 25px 0 0;
+    justify-self: end;
+  }
+  .hero-images .h-two {
+    width: 113%;
+    height: 202px;
+    margin-top: -52px;
+    margin-right: -24px;
+  }
+  section#solutions div.soln-header {
+    text-align: center;
+  }
+  section#solutions div.soln-header p {
+    margin: auto;
+  }
+  section#solutions div.dx-package {
+    position: relative;
+    grid-template-columns: repeat(2, 400px);
+    justify-content: space-between;
+    grid-template-areas: "img title" "img contenty";
+    margin-left: auto;
+    margin-right: auto;
+  }
+  section#solutions div.dx-package h4 {
+    grid-area: title;
+  }
+  section#solutions div.package-content {
+    grid-area: contenty;
+  }
+  section#solutions div.img-cont {
+    grid-area: img;
+    align-self: start;
+  }
+  section#solutions div.package-img {
+    width: min(100%, 304px);
+    margin: 0;
+  }
+  section#solutions div.package-img::before {
+    display: block;
+  }
+  section#solutions div.awp {
+    grid-template-areas: "title img" "contenty img";
+  }
+  section#solutions div.awp .img-cont,
+section#solutions div.awp .package-img {
+    justify-self: end;
+  }
+  section#faqs {
+    display: flex;
+    justify-content: space-between;
+    gap: 10%;
+  }
+  section#faqs div.faq-cont {
+    flex-direction: row;
+  }
+  section#faqs div.illustration-cont {
+    display: block;
+  }
+  section#faqs .answer {
+    max-width: 62ch;
+    padding-left: 40px;
+  }
+  section#anecdote img {
+    justify-self: center;
+  }
+  section#footer div.footer-last {
+    justify-self: end;
+  }
+}
+div.copyright-txt {
+  text-align: center;
 }
